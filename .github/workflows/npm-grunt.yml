@@ -5,7 +5,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
+env:
+      SALUDO: Hola
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,8 +14,7 @@ jobs:
     strategy:
       matrix:
         node-version: [22.x]
-    env:
-      SALUDO: Hola
+    
     steps:
       - uses: actions/checkout@v4
   
@@ -30,4 +30,4 @@ jobs:
         run: |
           npm run dev
       - name: Saludar
-        run: echo "{{ $SALUDO }}, ${{ vars.NAME }}
+        run: echo "{{ env.SALUDO }}, ${{ vars.NAME }}
