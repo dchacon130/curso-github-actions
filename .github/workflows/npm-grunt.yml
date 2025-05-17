@@ -13,20 +13,21 @@ jobs:
     strategy:
       matrix:
         node-version: [22.x]
-
+    env:
+      SALUDO: Hola
     steps:
-    - uses: actions/checkout@v4
-
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-
-    - name: Build
-      run: |
-        npm install
-    - name: Run
-      run: |
-        npm run dev
-    - name: Saludar
-      run: echo vars.NAME
+      - uses: actions/checkout@v4
+  
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      
+      - name: Build
+        run: |
+          npm install
+      - name: Run
+        run: |
+          npm run dev
+      - name: Saludar
+        run: echo "$SALUDO, ${{ vars.NAME }}
