@@ -1,0 +1,24 @@
+{
+  "name": "curso-github-actions",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "github",
+    "actions"
+  ],
+  "homepage": "https://github.com/dchacon130/curso-github-actions#readme",
+  "bugs": {
+    "url": "https://github.com/dchacon130/curso-github-actions/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dchacon130/curso-github-actions.git"
+  },
+  "license": "ISC",
+  "author": "Diego Chacon",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src/index.js"
+  }
+}
