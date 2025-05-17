@@ -28,3 +28,5 @@ jobs:
     - name: Run
       run: |
         npm run dev
+    - name: Saludar
+      run: echo vars.NAME
